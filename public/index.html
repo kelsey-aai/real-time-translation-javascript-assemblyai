@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real-time translation</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; }
+      .controls { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+      #status { color: #555; }
+      .turn { border-bottom: 1px solid #ddd; padding: 0.75rem 0; }
+      .source { margin: 0; color: #777; }
+      .final .source { color: #111; }
+      .source[data-lang]::before { content: "[" attr(data-lang) "] "; color: #999; }
+      .translation { margin: 0.25rem 0 0; font-weight: 600; color: #1e56a0; }
+      .translation.pending { font-weight: 400; color: #999; }
+    </style>
+  </head>
+  <body>
+    <h1>Real-time translation</h1>
+    <div class="controls">
+      <label>
+        Translate into
+        <select id="language">
+          <option>Spanish</option>
+          <option>French</option>
+          <option>German</option>
+          <option>Italian</option>
+          <option>Portuguese</option>
+          <option>Japanese</option>
+          <option>Korean</option>
+          <option>Mandarin Chinese</option>
+          <option>Hindi</option>
+          <option>English</option>
+        </select>
+      </label>
+      <button id="record">Start</button>
+      <span id="status">Pick a language and press Start.</span>
+    </div>
+    <div id="turns"></div>
+
+    <script src="/vendor/assemblyai-streaming.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
