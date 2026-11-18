@@ -1,6 +1,6 @@
 # Real-time translation app in JavaScript with AssemblyAI
 
-A browser app that captions live speech and translates every finished turn into the language you pick. It streams microphone audio to AssemblyAI's Universal-3.6 Pro Realtime model, and the streaming API's built-in LLM Gateway translation returns each turn's translation over the same WebSocket.
+A browser app that captions live speech and translates every finished turn into the language you pick. It streams microphone audio to AssemblyAI's AssemblyAI-STT-3.7-Realtime model (`assemblyai-stt-3-7-realtime`, $0.30/hr, built for captions and notetakers), and the streaming API's built-in LLM Gateway translation returns each turn's translation over the same WebSocket.
 
 This is the companion repo for the tutorial: [How to build a real-time language translation app in JavaScript with AssemblyAI](https://www.assemblyai.com/blog/how-to-create-a-real-time-language-translation-service-with-assemblyai-and-deepl-in-javascript).
 

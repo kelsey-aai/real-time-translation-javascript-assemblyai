@@ -133,7 +133,7 @@ async function start() {
   transcriber = new assemblyai.StreamingTranscriber({
     token,
     sampleRate: SAMPLE_RATE,
-    speechModel: "universal-3-6-pro",
+    speechModel: "assemblyai-stt-3-7-realtime",
     languageDetection: true,
     llmGateway: {
       model: "qwen3.5-4b-32k-fast",
